@@ -1,0 +1,324 @@
+
+@charset "utf-8";
+/* CSS Document */
+body {
+		overflow-x: hidden;
+		max-width: 100%;
+	}
+	
+header {
+	margin-bottom: 10%;
+}
+nav {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 8vh;
+	font-family: 'Asar';
+	background-color: #18161A;
+}
+
+
+.nav-links {
+	display: flex;
+	width: 55%;
+	/*background-color: black;*/
+	justify-content: space-around;
+	/*align-items: center;*/
+
+}
+
+.nav-links li {
+	list-style: none;
+}
+.nav-links a {
+	text-decoration: none;
+	letter-spacing: 3px;
+	font-size: 18px;
+	font-weight: bold;
+	color: white;
+}
+
+.burger {
+	display: none;
+}
+
+.burger div {
+	width: 25px;
+	height: 3px;
+	margin: 5px;
+	background-color: white;
+	
+}
+
+
+main {
+	margin-top: 5%;
+	position: relative;
+}
+
+.logo {
+	position: absolute;
+	top: -20%;
+	left: 39%;
+	width: 22%;
+}
+
+
+.AboutMe {
+	margin-top: 5%;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 7%;
+	border: 4px double #2F1F2C;
+	border-radius: 20px;
+	padding: 3%; 
+	font-family: 'Lora';
+	letter-spacing: 1px;
+	/*background-color: #B6B3CF; */
+	
+}
+
+.siggie {
+	font-family: 'Asar';
+	font-size: 20px;
+	margin-top: 4%;
+}
+
+.AboutMeRow {
+	display: flex;
+}
+
+.AboutMe h2 {
+	margin-top: 5%;
+}
+.TextColumn {
+	flex: 60%;
+	padding-right: 5%;
+	margin-left: 4%;
+	/*background-color: palevioletred;*/
+		
+}
+.ProfilePicColumn {
+	flex: 40%;
+	padding-left: 5%;
+	/*background-color: rebeccapurple;*/
+	
+}
+
+.mypicture {
+	width: 100%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+
+}
+
+
+@media screen and (min-width:1024px) {
+	.nav-links {
+		width: 65%;
+	}
+	
+	.mobileLogo {
+		display: none;
+	}
+}
+
+@media screen and (max-width:1024px) {
+	.nav-links {
+		width: 65%;
+	}
+	
+}
+
+@media (min-width: 769px) and (max-width:1024px) {
+	header {
+		margin-bottom: 10%;
+	}
+	main {
+		top: 6.5%;
+	}
+	
+	.logo {
+		width: 30%;
+		left: 39%;
+		top: -18%;
+	}
+	.mobileLogo {
+		display: none;
+	}
+	
+}
+
+@media (min-width: 481px) and (max-width:768px) { 
+	
+	/*Navigation*/
+	body {
+		overflow-x: hidden;
+		max-width: 100%;
+	}
+	
+	.nav-links {
+		position: absolute;
+		height: 92vh; /*makes menu the full height of screen*/
+		width: 50%;
+		right: 0px;
+		top: 6vh;
+		background-color: #18161A;
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+		transform: translateX(100%);
+		transition: transform 0.5s ease-in;
+		z-index: 100;
+		overflow-x: hidden;
+	}
+	
+	.nav-links li {
+		opacity: 0;
+	}
+	
+	.burger {
+		display: block;
+		margin-left: 80%;
+		 
+	}
+	.nav-active {
+		transform: translateX(0%);
+	}
+	
+	@keyframes navLinkFade{
+		from{
+			opacity: 0;
+			transform: translateX(50px);
+		}
+		to{
+			opacity: 1;
+			transform: translateX(0px);
+			
+		}
+	}
+	/*End Navigation*/
+	
+		
+	.logo 	{
+		display: none;
+				
+	}
+	.mobileLogo {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		
+	}
+	
+	.AboutMe {
+		width: 90%;
+		
+	}
+
+	.ProfilePicColumn {
+		margin-right: 4%;	
+	}
+
+	.TextColumn {
+		margin-top: 4%;
+		margin-left: 4%;	
+		}
+	}
+
+
+@media (max-width:480px) { 
+/*Navigation*/
+	body {
+		overflow-x: hidden;
+		max-width: 100%;
+	}
+	
+
+	.nav-links {
+		position: absolute;
+		height: 92vh; /*makes menu the full height of screen*/
+		right: 0px;
+		top: 6vh;
+		background-color: #18161A;
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+		width: 50%;
+		transform: translateX(100%);
+		transition: transform 0.5s ease-in;
+		overflow-x: hidden;
+		z-index: 100;
+	}
+	
+	.nav-links li {
+		opacity: 0;
+	}
+	
+	.burger {
+		display: block;
+		margin-left: 80%;
+	}
+	.nav-active {
+		transform: translateX(0%);
+	}
+	
+	@keyframes navLinkFade{
+		from{
+			opacity: 0;
+			transform: translateX(50px);
+		}
+		to{
+			opacity: 1;
+			transform: translateX(0px);
+			
+		}
+	}
+	/*End Navigation*/
+
+	figure {
+		padding-top:3%;
+		padding-bottom: 5%;
+		
+	}
+	
+	main {
+		top: 5%;
+	}
+	
+	.logo {
+		display: none;
+		}
+
+	.mobileLogo {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 80%;
+		
+	}
+	
+	.AboutMe {
+		width: 90%;
+	}
+	.AboutMeRow {
+		flex-wrap: wrap;
+	}
+	.ProfilePicColumn {
+		flex: 80%;
+		margin-right: 4%;
+		margin-top: 8%;
+	}
+
+	.AboutMe h2{
+		margin-bottom: 6%;
+	}
+
+	.TextColumn {
+		flex: 80%;	
+		margin-top: 6%;
+	}
+	/*end properties that only apply to phones */ 
+
+} 
